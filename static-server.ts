@@ -3,10 +3,17 @@ import * as path from "path";
 
 const app = express();
 
-app.use('/',             express.static(path.join(__dirname, '..', 'static')));
+// app.use('/', function (request, response, next ) {
+//   console.log('app.use() invoked for /');
+//   Process the next middleware request
+//   next();
 
-// app.get('/', (req, res) => {
-//     res.sendFile(path.join(__dirname, '../client/main.html'));
+//   response.sendFile(path.join(__dirname, '../static/hello-world.html'));
+// })
+app.use('/', express.static(path.join(__dirname, '..', 'static')));
+
+// app.get('/', (request, response) => {
+//     response.sendFile(path.join(__dirname, '../static/hello-world.html'));
 // });
 
 const server = app.listen(8000, "localhost", () => {
