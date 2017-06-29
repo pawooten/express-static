@@ -2,6 +2,10 @@
   "name": "express-static",
   "version": "1.0.0",
   "description": "A sample project using node.js express to server static content over http",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pawooten/express-static.git"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,7 +13,9 @@
   "author": "pawooten",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.15.3",
+    "express": "^4.15.3"
+  },
+  "devDependencies": {
     "typescript": "^2.4.1"
   }
 }
